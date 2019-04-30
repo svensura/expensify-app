@@ -11,11 +11,8 @@
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json",
     "start": "node server/server.js",
-    "heroku-postbuild": "yarn run build:prod",
-    "engines": {
-      "node": "8.14.1",
-      "yarn": "1.15.2"
-    }
+    "heroku-postbuild": "yarn run build:prod"
+
   },
   "dependencies": {
     "babel-cli": "6.24.1",
@@ -50,7 +47,8 @@
     "style-loader": "0.18.2",
     "uuid": "^3.3.2",
     "validator": "8.0.0",
-    "webpack": "3.1.0",
+    "webpack": "^3.1.0",
+    "webpack-cli": "^3.3.1",
     "webpack-dev-server": "2.5.1"
   }
 }
