@@ -13,7 +13,8 @@
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod",
     "engines": {
-      "node": "8.14.1"
+      "node": "8.14.1",
+      "yarn": "1.15.2"
     }
   },
   "dependencies": {
