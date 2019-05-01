@@ -21,10 +21,6 @@ const resetCount = () => ({
   type: 'RESET'
 });
 
-// Reducers
-// 1. Reducers are pure functions
-// 2. Never change state or actiton
-
 const countReducer = (state = { count: 0 }, action) => {
   switch (action.type) {
     case 'INCREMENT':
