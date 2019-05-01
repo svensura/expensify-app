@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SHOULD RENDER <ExpenseListItem /> WITH expenses[0] 1`] = `
+<div>
+  <Link
+    to="/edit/1"
+  >
+    <h3>
+      MacBook Pro 13
+    </h3>
+  </Link>
+  <p>
+    6000
+  </p>
+  <p>
+    0
+  </p>
+</div>
+`;
