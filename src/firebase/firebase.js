@@ -6,7 +6,7 @@ const config = {
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
     databaseURL: process.env.FIREBASE_DATABASE_URL,
     projectId: process.env.FIREBASE_PROJECT_ID,
-    storageBucket: "expensify-test-e3c11.appspot.com",
+    storageBucket: FIREBASE_STORAGE_BUCKET,
     messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
   };
 
