@@ -27,11 +27,11 @@ test('should handle editExpense', () => {
     expect(editExpense).toHaveBeenLastCalledWith(expenses[1].id, expenses[1]);
 });
 
-test('should handle removeExpense', () => {
-    const removeExpense = jest.fn();
+test('should handle startRemoveExpense', () => {
+    const startRemoveExpense = jest.fn();
     const history = { push: jest.fn() };
-    const wrapper = shallow(<EditExpensePage removeExpense={removeExpense} history={history} expense={expenses[1]}/>);
+    const wrapper = shallow(<EditExpensePage startRemoveExpense={startRemoveExpense} history={history} expense={expenses[1]}/>);
     wrapper.find('button').simulate('click')
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(removeExpense).toHaveBeenLastCalledWith(expenses[1].id);
+    expect(startRemoveExpense).toHaveBeenLastCalledWith(expenses[1].id);
 });
