@@ -12,19 +12,19 @@ import expenses from '../fixtures/expenses';
 // });
 
 test('should render EditExpensePage correctly', () => {
-    const editExpense = jest.fn();
+    const startEditExpense = jest.fn();
     const history = { push: jest.fn() };
-    const wrapper = shallow(<EditExpensePage editExpense={editExpense} history={history} />);
+    const wrapper = shallow(<EditExpensePage startEditExpense={startEditExpense} history={history} />);
     expect(wrapper).toMatchSnapshot();
 });
 
 test('should handle editExpense', () => {
-    const editExpense = jest.fn();
+    const startEditExpense = jest.fn();
     const history = { push: jest.fn() };
-    const wrapper = shallow(<EditExpensePage editExpense={editExpense} history={history} expense={expenses[1]} />);
+    const wrapper = shallow(<EditExpensePage startEditExpense={startEditExpense} history={history} expense={expenses[1]} />);
     wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
     expect(history.push).toHaveBeenLastCalledWith('/');
-    expect(editExpense).toHaveBeenLastCalledWith(expenses[1].id, expenses[1]);
+    expect(startEditExpense).toHaveBeenLastCalledWith(expenses[1].id, expenses[1]);
 });
 
 test('should handle startRemoveExpense', () => {
