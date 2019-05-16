@@ -1,9 +1,7 @@
-import configureMockStore from 'redux-mock-store';
-import thunk from 'redux-thunk'
 import { login, logout } from '../../actions/auth'
 
 
-test('should login', () => {
+test('should gernerate login action object', () => {
     const action = login('123abc')
     expect(action).toEqual({
         type: 'LOGIN',
@@ -11,7 +9,7 @@ test('should login', () => {
     })
 })
 
-test('should logout', () => {
+test('should gernerate logout action object', () => {
     const action = logout()
     expect(action).toEqual({
         type: 'LOGOUT'
