@@ -1,0 +1,16 @@
+.text-input {
+    border: 1px solid #cacccd;
+    height: 50px;
+    font-size: $font-size-large;
+    font-weight: 300;
+    padding: $sSize;
+}
+
+.select {
+    @extend .text-input;                //sass inheritance
+}
+
+.textarea {
+    @extend .text-input;                //sass inheritance
+    height: 10rem;
+}

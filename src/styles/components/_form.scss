@@ -1,0 +1,12 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    > * {
+        margin-bottom: $mSize;                  // addressing all direct children of form
+    }
+}
+
+.form__error {
+    margin: 0 0 $mSize 0;
+    font-style: italic;
+}

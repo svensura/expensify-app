@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import selectExpenses from '../selectors/expenses'
 import selectExpensesTotal from '../selectors/expenses-total';
 import numeral from 'numeraljs'
@@ -7,10 +8,15 @@ import numeral from 'numeraljs'
 
 export const ExpensesSummary = (props) => {      // export to test the unconnected method
     return (
-    <div>
-        <h1>
-           Viewing {props.expenseCount} expense(s) totalling {numeral(props.expensesTotal / 100).format('$0.0,')}
-        </h1>
+    <div className="page-header"> 
+        <div className="content-container">
+            <h1 className="page-header__title">
+            Viewing <span>{props.expenseCount}</span> expense(s) totalling <span>{numeral(props.expensesTotal / 100).format('$0.0,')}</span>
+            </h1>
+            <div className="page-header__actions">
+                <Link className="button" to="/create">Add Expense</Link>
+            </div>
+        </div>    
     </div>
     )
 }
