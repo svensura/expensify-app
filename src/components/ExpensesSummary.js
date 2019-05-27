@@ -11,10 +11,10 @@ export const ExpensesSummary = (props) => {      // export to test the unconnect
     <div className="page-header"> 
         <div className="content-container">
             <h1 className="page-header__title">
-            Viewing <span>{props.expenseCount}</span> expense(s) totalling <span>{numeral(props.expensesTotal / 100).format('$0.0,')}</span>
+            <span>{props.expenseCount}</span> Ausgabe(n) insgesamt <span>{numeral(props.expensesTotal / 100).format('€0.0,')}</span>
             </h1>
             <div className="page-header__actions">
-                <Link className="button" to="/create">Add Expense</Link>
+                <Link className="button" to="/create">Ausgabe hinzufügen</Link>
             </div>
         </div>    
     </div>

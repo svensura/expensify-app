@@ -39,7 +39,7 @@ export class EditExpensePage extends React.Component {
             <div>
                 <div className="page-header"> 
                     <div className="content-container">
-                        <h1 className="page-header__title">Edit Expense</h1>
+                        <h1 className="page-header__title">Ausgabe bearbeiten</h1>
                     </div>
                 </div>
                 <div className="content-container">
@@ -50,7 +50,7 @@ export class EditExpensePage extends React.Component {
                 <button
                     className="button--secondary"
                     onClick = {this.onClick}
-                >Remove Expense
+                >Ausgabe entfernen
                 </button>      
                 </div>
             </div>

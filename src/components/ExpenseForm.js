@@ -26,7 +26,7 @@ export default class ExpenseForm extends React.Component {
 
     onAmountChange = (e) => {
         const amount = e.target.value
-        if(!amount || (amount.match(/^\d{1,}(\.\d{0,2})?$/))) {  //regex
+        if(!amount || (amount.match(/^\d{1,}(\.\d{0,2})?€/))) {  //regex
             this.setState(() => ({ amount }))
         }
     }
@@ -65,7 +65,7 @@ export default class ExpenseForm extends React.Component {
     render() {
         return ( 
             <form className="form" onSubmit={this.onSubmit}>
-            {this.state.error&&<p className="form__error">Enter Description and Value!</p>}
+            {this.state.error&&<p className="form__error">Beschreibung und Wert eingeben!</p>}
                 <input
                     type="text"
                     placeholder="Description"
@@ -97,7 +97,7 @@ export default class ExpenseForm extends React.Component {
                 >
                 </textarea>
                 <div> 
-                    <button className="button">Save Expense</button>  
+                    <button className="button">Ausgabe speichern</button>  
                 </div>
             </form>
         )

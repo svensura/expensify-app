@@ -7,14 +7,14 @@ import selectExpenses from '../selectors/expenses'
 export const ExpenseList = (props) => (   // export to test the unconnected method
     <div className="content-container">
         <div className="list-header">
-            <div className="show-for-mobile">Expenses</div>
-            <div className="show-for-desktop">Expense</div>
-            <div className="show-for-desktop">Amount</div>
+            <div className="show-for-mobile">Ausgaben</div>
+            <div className="show-for-desktop">Ausgabe</div>
+            <div className="show-for-desktop">Betrag</div>
         </div>
         <div className="list-body">
         {
             props.expenses.length === 0 ? (
-                <div className="list-item--message"><span>No expenses</span></div>
+                <div className="list-item--message"><span>Keine Ausgaben</span></div>
             ) : (
                 props.expenses.map((expense) => (
                     <ExpenseListItem
