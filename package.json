@@ -27,7 +27,7 @@
     "firebase": "^5.11.0",
     "history": "^4.9.0",
     "jest": "20.0.4",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "4.5.3",
     "normalize.css": "7.0.0",
     "numeraljs": "^1.5.6",
